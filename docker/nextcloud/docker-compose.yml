@@ -23,9 +23,11 @@ services:
       - MYSQL_PASSWORD=djskl312FJAleij
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
+## FOR DEBUG (recovering innodb)
+#command: bash -c 'printf "[mysqld]\ninnodb_force_recovery = 6\ninnodb_purge_threads =0\nuser = root\n" > /root/.my.cnf && mysqld'
 
   app:
-    image: nextcloud:16.0.11
+    image: nextcloud:20
     ports:
       - 37498:80
     links:
