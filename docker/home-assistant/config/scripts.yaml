@@ -1,0 +1,9 @@
+'1605509118868':
+  alias: Turn On/Off TV
+  sequence:
+  - service: androidtv.adb_command
+    data:
+      entity_id: media_player.android_tv
+      command: POWER
+    entity_id: media_player.android_tv
+  mode: single

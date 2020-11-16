@@ -1,1 +1,19 @@
-[]
+- alias: Go Home TV
+  action:
+    service: androidtv.adb_command
+    data:
+    entity_id: media_player.android_tv_1
+    command: HOME
+  id: 1b8db33f86894490833ca4bf7f6b3836
+- id: '1605507560745'
+  alias: Turn On/Off TV
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: androidtv.adb_command
+    data:
+      entity_id: media_player.android_tv
+      command: POWER
+    entity_id: media_player.android_tv
+  mode: single
