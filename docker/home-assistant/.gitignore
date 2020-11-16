@@ -1,0 +1,5 @@
+*.log
+*.db
+*.mp3
+config/.storage
+config/secrets.yaml
