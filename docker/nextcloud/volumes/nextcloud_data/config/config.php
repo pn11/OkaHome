@@ -22,7 +22,7 @@ $CONFIG = array (
   'secret' => 'wbhF6ZN7DXTHW9595C58uF9ps/JTlbuxVFgmD9nO4AIIL797',
   'trusted_domains' => 
   array (
-    0 => '192.168.0.83:37498',
+    0 => '192.168.0.83:37498', 'debian.local'
   ),
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'mysql',
