@@ -35,3 +35,25 @@ services:
     volumes:
       - data:/var/www/html
     restart: always
+
+#  nginx:
+#    image: nginx
+#    ports:
+#      - 44443:443
+#    volumes:
+#      - ./nginx/conf.d:/etc/nginx/conf.d
+#      - ./nginx/ssl:/etc/nginx/ssl
+#    restart: always
+
+# 2022/10/06 removed
+#  https-portal:
+#    image: steveltn/https-portal:1
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    depends_on:
+#      - app
+#    restart: always
+#    environment:
+#      DOMAINS: 'debian.local -> http://app:80'
+#      STAGE: local
