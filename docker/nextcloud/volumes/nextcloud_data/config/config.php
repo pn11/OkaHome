@@ -22,11 +22,12 @@ $CONFIG = array (
   'secret' => 'wbhF6ZN7DXTHW9595C58uF9ps/JTlbuxVFgmD9nO4AIIL797',
   'trusted_domains' => 
   array (
-    0 => '192.168.0.83:37498', 'debian.local'
+    0 => '192.168.0.83:37498',
+    1 => 'debian.local',
   ),
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'mysql',
-  'version' => '20.0.0.9',
+  'version' => '20.0.14.2',
   'overwrite.cli.url' => 'http://192.168.0.83:37498',
   'dbname' => 'nextcloud',
   'dbhost' => 'nextcloud_db_1',
@@ -36,4 +37,7 @@ $CONFIG = array (
   'dbuser' => 'nextcloud',
   'dbpassword' => 'djskl312FJAleij',
   'installed' => true,
+  'loglevel' => 0,
+  'maintenance' => false,
+  'theme' => '',
 );
