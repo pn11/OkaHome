@@ -27,7 +27,7 @@ services:
 #command: bash -c 'printf "[mysqld]\ninnodb_force_recovery = 6\ninnodb_purge_threads =0\nuser = root\n" > /root/.my.cnf && mysqld'
 
   app:
-    image: nextcloud:20
+    image: nextcloud:26
     ports:
       - 37498:80
     links:
