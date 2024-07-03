@@ -1,0 +1,32 @@
+services:
+  piwigo:
+    image: lscr.io/linuxserver/piwigo:latest
+    container_name: piwigo
+    environment:
+      # userid と groupid は id コマンドで調べる
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./config:/config
+      - ./gallery:/gallery
+    ports:
+      - 30080:80
+    restart: unless-stopped
+
+  mariadb:
+    image: linuxserver/mariadb:latest
+    container_name: piwigo_db
+    environment:
+      # userid と groupid は id コマンドで調べる
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tokyo
+      - MYSQL_ROOT_PASSWORD=dfnsoj409rfj04gf
+      - MARIADB_DATABASE=piwigo_db
+      - MARIADB_USER=piwigo
+      - MARIADB_PASSWORD=gdskrj0ef0g
+    volumes:
+      - ./mariadb:/config
+    ports:
+      - 33307:3306
